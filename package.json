@@ -1,0 +1,34 @@
+{
+  "name": "employee-leave-management-system",
+  "version": "1.0.0",
+  "description": "A full-stack web application for managing employee leave requests with role-based access control, built with Node.js, Express.js, and SQLite.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "setup": "node setup.js",
+    "fix-passwords": "node fix-passwords.js",
+    "add-indian-employees": "node add-indian-employees.js",
+    "list-employees": "node list-employees.js",
+    "debug": "node debug.js",
+    "update-manager": "node update-manager.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "full-setup": "npm install && node setup.js && node fix-passwords.js",
+    "reset-db": "node setup.js && node fix-passwords.js"
+  },
+  "keywords": ["employee", "leave", "management", "system", "hr", "nodejs", "express", "sqlite", "web-application", "dashboard"],
+  "author": "Lokesh Yadav",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
