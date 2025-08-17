@@ -1,4 +1,4 @@
-# 🏢 Employee Leave Management System (LMS 2.0)
+# Employee Leave Management System (LMS 2.0)
 
 A comprehensive web-based Employee Leave Management System built with Node.js, Express, and SQLite. This system supports 55+ employees across 6 departments with full leave tracking, approval workflows, and administrative features.
 
@@ -9,18 +9,18 @@ A comprehensive web-based Employee Leave Management System built with Node.js, E
 - **Manager Dashboard** - Team leave approvals and management
 - **Employee Portal** - Leave requests and balance tracking
 
-### 📊 **Leave Management**
+### **Leave Management**
 - **6 Leave Types**: Annual, Sick, Personal, Emergency, Maternity, Paternity
 - **Leave Balance Tracking** - Real-time balance calculations
 - **Request Workflows** - Submit, approve, reject leave requests
 - **Calendar Integration** - Visual leave calendar
 
-### 👥 **Multi-Department Support**
+###  **Multi-Department Support**
 - **6 Departments**: IT, HR, Sales, Marketing, Finance, Operations
-- **55+ Employees** ready to use
+- **50+ Employees** ready to use
 - **Departmental Organization** with proper reporting structure
 
-### 🛠️ **Technical Features**
+###  **Technical Features**
 - **SQLite Database** - Lightweight and efficient
 - **JWT Authentication** - Secure token-based auth
 - **RESTful API** - Clean API endpoints
@@ -29,7 +29,7 @@ A comprehensive web-based Employee Leave Management System built with Node.js, E
 
 ---
 
-## 🚀 Quick Start Guide
+## Quick Start Guide
 
 ### Prerequisites
 - Node.js (version 14 or higher)
@@ -76,27 +76,27 @@ For testing purposes, the system comes pre-configured with these accounts:
 
 ---
 
-## 📋 System Features
+## System Features
 
-### 👤 For Employees
-- 📊 **Dashboard**: Real-time leave balances and request status
-- 📝 **Request Leave**: Smart date validation and conflict detection
-- 📋 **My Requests**: Track all submitted requests with status updates
-- 📅 **Leave Calendar**: Visual calendar showing team availability
+### For Employees
+-  **Dashboard**: Real-time leave balances and request status
+-  **Request Leave**: Smart date validation and conflict detection
+-  **My Requests**: Track all submitted requests with status updates
+-  **Leave Calendar**: Visual calendar showing team availability
 
-### 👨‍💼 For Managers
-- ✅ **Approve/Reject**: Quick review and processing of leave requests
-- 👥 **Team Overview**: Complete visibility of team leave schedules
-- 📈 **Analytics**: Leave usage statistics and patterns
-- 🗓️ **Team Calendar**: Plan around team availability
+### For Managers
+-  **Approve/Reject**: Quick review and processing of leave requests
+-  **Team Overview**: Complete visibility of team leave schedules
+-  **Analytics**: Leave usage statistics and patterns
+-  **Team Calendar**: Plan around team availability
 
-### 🔧 For Administrators
-- 👥 **User Management**: Add, edit, remove employees and managers
-- ⚙️ **System Config**: Configure leave types, quotas, and policies
-- 📊 **Reports**: Generate comprehensive leave reports
-- 🔒 **Security**: Role-based access control
+### For Administrators
+-  **User Management**: Add, edit, remove employees and managers
+-  **System Config**: Configure leave types, quotas, and policies
+-  **Reports**: Generate comprehensive leave reports
+-  **Security**: Role-based access control
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 - **Backend**: Node.js 14+, Express.js
 - **Database**: SQLite (zero configuration required!)
@@ -106,7 +106,7 @@ For testing purposes, the system comes pre-configured with these accounts:
 - **Date Handling**: Flatpickr for enhanced date selection
 - **Security**: CORS protection, input validation
 
-## 🔐 Default Login Credentials
+## Default Login Credentials
 
 | Role | Email | Password | Name |
 |------|-------|----------|------|
@@ -116,7 +116,7 @@ For testing purposes, the system comes pre-configured with these accounts:
 | **Employee** | mayank@company.com | employee123 | Mayank Yadav |
 | **Employee** | mohini@company.com | employee123 | Mohini Yadav |
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 employee-leave-management/
@@ -146,7 +146,7 @@ employee-leave-management/
 └── setup.js              # Database initialization script
 ```
 
-## 🔧 Available Scripts
+##  Available Scripts
 
 - `npm start` - Start the production server
 - `npm run dev` - Start development server with auto-reload
@@ -183,7 +183,7 @@ The system comes with pre-configured leave types:
 | Maternity Leave | 90 | Maternity leave for new mothers |
 | Paternity Leave | 15 | Paternity leave for new fathers |
 
-## 🔒 Security Features
+##  Security Features
 
 - **JWT Authentication**: Secure token-based authentication
 - **Password Hashing**: bcrypt for secure password storage
@@ -191,7 +191,7 @@ The system comes with pre-configured leave types:
 - **Input Validation**: Server-side validation for all inputs
 - **CORS Protection**: Cross-Origin Resource Sharing configuration
 
-## 🛠️ Configuration
+##  Configuration
 
 ### Environment Variables (.env)
 ```
@@ -206,7 +206,7 @@ NODE_ENV=development
 - **No external database required**
 - **Automatic initialization** on first run
 
-## 🔧 Customization
+## Customization
 
 ### Adding New Leave Types
 1. Edit `config/setup-sqlite.sql`
@@ -222,7 +222,7 @@ NODE_ENV=development
 - Frontend: Modify `public/js/app.js`
 - Database: Update schema in `config/setup-sqlite.sql`
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -240,7 +240,7 @@ NODE_ENV=development
 4. **Module Not Found**
    - Run `npm install` to install dependencies
 
-## 📝 API Endpoints
+## API Endpoints
 
 ### Authentication
 - `POST /api/auth/login` - User login
@@ -263,7 +263,7 @@ NODE_ENV=development
 - `GET /api/dashboard/stats` - Get dashboard statistics
 - `GET /api/dashboard/recent-activities` - Get recent activities
 
-## 🚀 Deployment
+## Deployment
 
 ### Local Deployment
 - Already configured for local development
@@ -275,11 +275,11 @@ NODE_ENV=development
 3. Configure reverse proxy (nginx/Apache)
 4. Set up HTTPS certificate
 
-## 📄 License
+## License
 
 This project is open source and available under the MIT License.
 
-## 🤝 Support
+##  Support
 
 For support or questions:
 1. Check the troubleshooting section
@@ -287,7 +287,7 @@ For support or questions:
 3. Verify database initialization
 4. Check network connectivity on localhost:3000
 
-## 🔄 Updates
+##  Updates
 
 To update the system:
 1. Backup your `database.sqlite` file
@@ -354,7 +354,7 @@ To update the system:
 - `om.shukla@company.com` (Finance Department)
 - `larisa.menon@company.com` (Operations Department)
 
-### 📊 **System Statistics**
+###  **System Statistics**
 - **Total Users:** 55 (1 Admin + 1 Manager + 53 Employees)
 - **Departments:** 6 departments with proper distribution
 - **Leave Types:** 6 different leave categories
