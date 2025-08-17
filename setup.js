@@ -124,9 +124,9 @@ async function setupDatabase() {
             console.log('\n📋 Default Login Credentials:');
             console.log('👑 Admin - Email: admin@company.com, Password: admin123');
             console.log('👨‍💼 Manager - Email: manager@company.com, Password: manager123');
-            console.log('👨‍💻 Employee 1 - Email: lokesh@company.com, Password: employee123');
-            console.log('👩‍💻 Employee 2 - Email: mayank@company.com, Password: employee123');
-            console.log('👨‍💻 Employee 3 - Email: mohini@company.com, Password: employee123');
+            console.log('👥 ALL Employees - Use their email address, Password: employee123');
+            console.log('\n💡 Run "node list-employees.js" to see all available employees');
+            console.log('🌐 Access the application at: http://localhost:3001');
             
             db.close((err) => {
               if (err) {

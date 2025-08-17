@@ -60,17 +60,23 @@ async function debugDatabase() {
         }
       );
       
-      // Update employee passwords
-      const employees = ['lokesh@company.com', 'mayank@company.com', 'mohini@company.com'];
-      employees.forEach(email => {
-        db.run(
-          'UPDATE users SET password = ? WHERE email = ?',
-          [passwords['employee123'], email],
-          function(err) {
-            if (err) console.error(`Error updating ${email}:`, err);
-            else console.log(`✅ Updated ${email} password`);
-          }
-        );
+      // Update ALL employee passwords
+      db.all('SELECT email FROM users WHERE role = "employee" AND is_active = 1', [], (err, employees) => {
+        if (err) {
+          console.error('Error fetching employees:', err);
+          return;
+        }
+        
+        employees.forEach(employee => {
+          db.run(
+            'UPDATE users SET password = ? WHERE email = ?',
+            [passwords['employee123'], employee.email],
+            function(err) {
+              if (err) console.error(`Error updating ${employee.email}:`, err);
+              else console.log(`✅ Updated ${employee.email} password`);
+            }
+          );
+        });
       });
       
       // Test login after a delay

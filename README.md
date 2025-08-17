@@ -1,8 +1,31 @@
-# Employee Leave Management System
+# 🏢 Employee Leave Management System (LMS 2.0)
 
-**Full-Stack Web Application for HR Leave Management**
+A comprehensive web-based Employee Leave Management System built with Node.js, Express, and SQLite. This system supports 55+ employees across 6 departments with full leave tracking, approval workflows, and administrative features.
 
-A comprehensive employee leave management system built from scratch using Node.js, Express.js, and SQLite. This application demonstrates proficiency in full-stack development, database design, authentication, and modern web development practices.
+## Features
+
+### **Multi-Role Authentication**
+- **Admin Dashboard** - System administration and oversight
+- **Manager Dashboard** - Team leave approvals and management
+- **Employee Portal** - Leave requests and balance tracking
+
+### 📊 **Leave Management**
+- **6 Leave Types**: Annual, Sick, Personal, Emergency, Maternity, Paternity
+- **Leave Balance Tracking** - Real-time balance calculations
+- **Request Workflows** - Submit, approve, reject leave requests
+- **Calendar Integration** - Visual leave calendar
+
+### 👥 **Multi-Department Support**
+- **6 Departments**: IT, HR, Sales, Marketing, Finance, Operations
+- **55+ Employees** ready to use
+- **Departmental Organization** with proper reporting structure
+
+### 🛠️ **Technical Features**
+- **SQLite Database** - Lightweight and efficient
+- **JWT Authentication** - Secure token-based auth
+- **RESTful API** - Clean API endpoints
+- **Responsive Design** - Works on all devices
+- **Password Hashing** - Secure bcrypt encryption
 
 ---
 
@@ -300,3 +323,155 @@ To update the system:
 ---
 
 **Note**: This system demonstrates practical application of modern web development technologies and is suitable for small to medium-sized organizations.
+
+---
+
+
+
+ More than 50 employees can successfully access the system!
+
+### **Complete Login Credentials**
+
+#### **Admin Account**
+- **Email:** `admin@company.com`
+- **Password:** `admin123`
+
+#### **Manager Account**
+- **Email:** `manager@company.com`
+- **Password:** `manager123`
+
+#### **All Employees**
+**Password for ALL employees:** `employee123`
+
+**Sample Employee Emails:**
+- `lokesh@company.com` (IT Department)
+- `mayank@company.com` (IT Department)
+- `mohini@company.com` (HR Department)
+- `aarav.sharma@company.com` (IT Department)
+- `ananya.nair@company.com` (HR Department)
+- `krishna.yadav@company.com` (Sales Department)
+- `myra.kulkarni@company.com` (Marketing Department)
+- `om.shukla@company.com` (Finance Department)
+- `larisa.menon@company.com` (Operations Department)
+
+### 📊 **System Statistics**
+- **Total Users:** 55 (1 Admin + 1 Manager + 53 Employees)
+- **Departments:** 6 departments with proper distribution
+- **Leave Types:** 6 different leave categories
+- **Leave Records:** 324 leave balance records initialized
+- **Authentication:** 100% success rate for all users
+
+###  **Department Distribution**
+
+| Department | Employees | Sample Emails |
+|------------|-----------|---------------|
+| **IT** | 14 | `lokesh@company.com`, `aarav.sharma@company.com` |
+| **HR** | 9 | `mohini@company.com`, `ananya.nair@company.com` |
+| **Sales** | 8 | `krishna.yadav@company.com`, `aryan.mishra@company.com` |
+| **Marketing** | 8 | `myra.kulkarni@company.com`, `aanya.joshi@company.com` |
+| **Finance** | 8 | `om.shukla@company.com`, `aditi.goyal@company.com` |
+| **Operations** | 6 | `larisa.menon@company.com`, `kiara.iyer@company.com` |
+
+### 🧪 **Testing & Verification**
+
+**Test Database Connectivity:**
+```bash
+node quick-login-test.js
+```
+
+**Test Web API Endpoints:**
+```bash
+node test-web-api.js
+```
+
+**Test All Employee Logins:**
+```bash
+node test-employee-logins.js
+```
+
+**View All Employee Emails:**
+```bash
+node list-employees.js
+```
+
+**Show Login Credentials:**
+```bash
+node show-credentials.js
+```
+
+**Reset All Passwords (if needed):**
+```bash
+node fix-all-employees.js
+```
+
+### **Quick Start Instructions**
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/LokeshYadav24/Employees-Leave-Management-System.git
+   cd Employees-Leave-Management-System
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Initialize the system:**
+   ```bash
+   node fix-all-employees.js
+   ```
+
+4. **Start the server:**
+   ```bash
+   node server.js
+   ```
+
+5. **Access the application:**
+   ```
+   http://localhost:3001
+   ```
+
+6. **Login with any employee:**
+   - Use any employee email + `employee123`
+   - Manager: `manager@company.com` + `manager123`
+   - Admin: `admin@company.com` + `admin123`
+
+### 💡 **What Works**
+
+ **Login:** All 55 employees can log in with their email + "employee123"  
+ **Dashboard:** Each user sees their personalized dashboard  
+ **Leave Requests:** Employees can submit leave requests  
+ **Leave Balances:** All employees have proper leave allocations  
+ **Manager Features:** Manager can approve/reject requests  
+ **Admin Features:** Admin has full system access  
+ **Multi-Department:** All 6 departments are fully functional  
+ **Database:** 55 users, 324 leave balance records  
+ **Authentication:** 100% login success rate  
+
+### 🔧 **Troubleshooting Commands**
+
+**If server won't start:**
+```bash
+# Check if port 3001 is in use
+netstat -ano | findstr :3001
+
+# Kill process if needed (replace XXXX with actual PID)
+taskkill /F /PID XXXX
+```
+
+**If login issues occur:**
+```bash
+# Verify all user credentials
+node show-credentials.js
+
+# Test specific login
+node quick-login-test.js
+
+# Reset all employee data
+node fix-all-employees.js
+```
+
+**🌐 Live Demo:** Start the server and visit `http://localhost:3001`
+
+**📧 For complete list of all 55 employee emails, run:** `node list-employees.js`

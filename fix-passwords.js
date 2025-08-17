@@ -50,24 +50,38 @@ async function fixPasswords() {
       );
     });
     
-    // Update all employee passwords
-    const employees = ['lokesh@company.com', 'mayank@company.com', 'mohini@company.com'];
-    
-    for (const email of employees) {
-      await new Promise((resolve, reject) => {
-        db.run(
-          'UPDATE users SET password = ? WHERE email = ?',
-          [employeeHash, email],
-          function(err) {
-            if (err) reject(err);
-            else {
-              console.log(`✅ Updated password for ${email}`);
-              resolve();
-            }
+    // Update ALL employee passwords
+    await new Promise((resolve, reject) => {
+      db.all('SELECT email FROM users WHERE role = "employee" AND is_active = 1', [], async (err, employees) => {
+        if (err) {
+          reject(err);
+          return;
+        }
+        
+        console.log(`Found ${employees.length} employees to update`);
+        
+        try {
+          for (const employee of employees) {
+            await new Promise((resolveUpdate, rejectUpdate) => {
+              db.run(
+                'UPDATE users SET password = ? WHERE email = ?',
+                [employeeHash, employee.email],
+                function(err) {
+                  if (err) rejectUpdate(err);
+                  else {
+                    console.log(`✅ Updated password for ${employee.email}`);
+                    resolveUpdate();
+                  }
+                }
+              );
+            });
           }
-        );
+          resolve();
+        } catch (error) {
+          reject(error);
+        }
       });
-    }
+    });
     
     // Verify users exist
     await new Promise((resolve, reject) => {
@@ -88,9 +102,8 @@ async function fixPasswords() {
     console.log('\\n📋 Login Credentials:');
     console.log('👑 Admin - Email: admin@company.com, Password: admin123');
     console.log('👨‍💼 Manager - Email: manager@company.com, Password: manager123');
-    console.log('👨‍💻 Employee - Email: lokesh@company.com, Password: employee123');
-    console.log('👩‍💻 Employee - Email: mayank@company.com, Password: employee123');
-    console.log('👨‍💻 Employee - Email: mohini@company.com, Password: employee123');
+    console.log('👥 ALL Employees - Use their email address, Password: employee123');
+    console.log('\\n💡 All 55+ employees can now log in with their email and "employee123"');
     
   } catch (error) {
     console.error('❌ Error fixing passwords:', error);
